@@ -31,6 +31,15 @@
 - Revised `/home/daniel/git/vidiq/prompts/04-download-citation-pdfs.md` to remove path ambiguity by requiring both the PDFs and the report to live in `/home/daniel/git/vidiq/lit-survey/pdfs`.
 - Added `/home/daniel/git/vidiq/prompts/05-download-pdfs-into-subfolder.md`, an authoritative prompt instructing an agent to place both downloaded PDFs and `download-report.md` in `/home/daniel/git/vidiq/lit-survey/pdfs`.
 - Required the PDF download report to begin with one-line counters for successes, failures, items needing review, duplicates skipped, and total processed.
+- Created `prompts/06-compare-lit-surveys.md`, a prompt for performing a meta-analysis and comparative synthesis of the existing literature surveys, focused on identifying consensus and gaps for the "truth and trust" video objective.
+- Completed the meta-analysis and comparative synthesis of the five literature surveys, resulting in the `lit-survey/meta-analysis.md` report. The analysis identified key consensus areas (anisotropy, alignment/uniformity, modality gap) and critical gaps regarding temporal dynamics and video-specific trust metrics.
 
 Signed,
 codex
+
+## March 25, 2026
+
+- Added `/home/daniel/git/vidiq/prompts/07-extract-title-abstract-conclusion.md`, a prompt directing an agent to read every PDF in `/home/daniel/git/vidiq/lit-survey/codex` and generate `/home/daniel/git/vidiq/reports/title-abstract-conclusion.md`.
+- Created `/home/daniel/git/vidiq/reports/` as the target directory for generated extraction reports.
+- Specified in the new prompt that the report must extract, for every PDF, the paper title, abstract, and conclusion, mark missing sections as `Not found`, preserve source wording conservatively, and include a summary plus a complete processed file list.
+- Prepared the new prompt and this work diary update for a dedicated commit without including the unrelated staged PDFs or other prompt changes currently present in the worktree.
