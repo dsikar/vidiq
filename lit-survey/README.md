@@ -61,8 +61,8 @@ Column guide:
 | 39 | 2020-zhang-bertscore.pdf | D |  |  |
 | 40 | 2021-bansal-revisiting-model-stitching.pdf | D |  |  |
 | 41 | 2021-bis-shifting-embeddings.pdf | D |  |  |
-| 42 | 2021-clipscore-reference-free-evaluation-metric-image-captioning.pdf | D |  |  |
-| 43 | 2021-generalized-shape-metrics-on-neural-representations.pdf | P |  |  |
+| 42 | 2021-clipscore-reference-free-evaluation-metric-image-captioning.pdf | D |  | Not a lot worth relevant to us. |
+| 43 | 2021-generalized-shape-metrics-on-neural-representations.pdf | P |  | Discusses metrics to compare embeddings, might be important especially convolutional aware metrics. |
 | 44 | 2021-how-does-fine-tuning-affect-geometry-embedding-space.pdf | P |  |  |
 | 45 | 2021-isoscore-measuring-uniformity-embedding-space-utilization.pdf | P |  |  |
 | 46 | 2021-learning-transferable-visual-models-from-natural-language-supervision.pdf | P |  |  |
