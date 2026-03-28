@@ -43,3 +43,17 @@ codex
 - Created `/home/daniel/git/vidiq/reports/` as the target directory for generated extraction reports.
 - Specified in the new prompt that the report must extract, for every PDF, the paper title, abstract, and conclusion, mark missing sections as `Not found`, preserve source wording conservatively, and include a summary plus a complete processed file list.
 - Prepared the new prompt and this work diary update for a dedicated commit without including the unrelated staged PDFs or other prompt changes currently present in the worktree.
+
+## March 28, 2026
+
+- Generated `/home/daniel/git/vidiq/reports/title-abstract-conclusion.md` from the PDFs in `/home/daniel/git/vidiq/lit-survey/codex`, then updated it so the paper entries and source-file list are numbered consistently.
+- Added `/home/daniel/git/vidiq/prompts/08-reprocess-missing-extractions.md` to support a follow-up pass on missing abstracts or conclusions in the extraction report.
+- Added `/home/daniel/git/vidiq/prompts/09-number-title-abstract-conclusion-entries.md` to number the entries in `reports/title-abstract-conclusion.md`.
+- Added `/home/daniel/git/vidiq/prompts/10-count-downloaded-files-by-model.md` and generated `/home/daniel/git/vidiq/reports/download-counts-by-model.md` summarizing file counts in `lit-survey/claude`, `lit-survey/codex`, and `lit-survey/gemini`.
+- Added `/home/daniel/git/vidiq/prompts/11-create-lit-survey-readme-review-table.md` and created `/home/daniel/git/vidiq/lit-survey/README.md`, which assigns Daniel to papers 1-42 and Pritish to papers 43-82 for manual relevance review.
+- Added `/home/daniel/git/vidiq/prompts/12-find-sentiment-analysis-distance-relevance.md` and generated `/home/daniel/git/vidiq/reports/sentiment-distance-relevance.md`, a short report assessing whether the extracted papers contain prior work directly relevant to embedding-distance methods for sentiment analysis across text, images, and image sequences/video.
+- Updated prompt 12 and the resulting sentiment relevance report so each listed finding includes the paper number from `reports/title-abstract-conclusion.md`.
+- Pushed the recent report and README work to `origin/main` in three commits:
+  - `34d6bb2` — `Add literature review README and extraction report`
+  - `82ab4d9` — `Add model download counts report`
+  - `9f110d1` — `Add sentiment distance relevance prompt and report`
