@@ -1,1 +1,4 @@
 lit-survey/claude/
+__pycache__/
+*.pyc
+vidiq-hpc/

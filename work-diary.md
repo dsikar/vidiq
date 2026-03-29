@@ -57,3 +57,14 @@ codex
   - `34d6bb2` — `Add literature review README and extraction report`
   - `82ab4d9` — `Add model download counts report`
   - `9f110d1` — `Add sentiment distance relevance prompt and report`
+
+## March 29, 2026
+
+- Added `/home/daniel/git/vidiq/prompts/13-setup-vidiq-hpc.md` to create and initialize the `vidiq-hpc` experiments directory, which will eventually be linked to `github.com/dsikar/vidiq-hpc`.
+- Actioned the prompt `13-setup-vidiq-hpc.md`:
+  - Created `vidiq-hpc/` directory in the current workspace.
+  - Initialized git in `vidiq-hpc/` and renamed the default branch to `main`.
+  - Added the remote origin: `git@github.com:dsikar/vidiq-hpc.git`.
+  - Created `vidiq-hpc/README.md` as an initial file.
+  - Added `vidiq-hpc/` to the parent repository's `.gitignore`.
+- Added `/home/daniel/git/vidiq/prompts/14-first-hpc-experiment-workflow.md`, an extensive workflow for the first `vidiq-hpc` experiment. This prompt guides an agent through a literature survey of datasets, model selection ($\le 8$B parameters), embedding extraction, and geometric analysis (clustering and centroid plotting) for "Happy" vs. "Sad" sentiments.

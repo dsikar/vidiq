@@ -4,11 +4,26 @@ Your task is to download PDFs for the citations listed in:
 
 `/home/daniel/git/vidiq/lit-survey/citation-index.md`
 
-and place both the downloaded PDFs and the download report in the same subfolder:
+and place both the downloaded PDFs and the download report in the same agent-specific subfolder.
 
-`/home/daniel/git/vidiq/lit-survey/pdfs`
+Determine your agent identity first and then use exactly one of these base folders:
 
-This prompt is authoritative about output locations. If any earlier prompt appears to conflict, use this folder for both the PDFs and the report.
+- Codex: `/home/daniel/git/vidiq/lit-survey/codex`
+- Claude: `/home/daniel/git/vidiq/lit-survey/claude`
+- Gemini: `/home/daniel/git/vidiq/lit-survey/gemini`
+
+Inside that base folder, put both the PDFs and the report in:
+
+`/home/daniel/git/vidiq/lit-survey/<agent-name>/pdfs`
+
+Examples:
+
+- Codex must use `/home/daniel/git/vidiq/lit-survey/codex/pdfs`
+- Claude must use `/home/daniel/git/vidiq/lit-survey/claude/pdfs`
+- Gemini must use `/home/daniel/git/vidiq/lit-survey/gemini/pdfs`
+
+This prompt is authoritative about output locations. If any earlier prompt appears to conflict, use your own agent-specific folder for both the PDFs and the report.
+Do not use a shared folder such as `/home/daniel/git/vidiq/lit-survey/pdfs`.
 
 ---
 
@@ -16,8 +31,8 @@ This prompt is authoritative about output locations. If any earlier prompt appea
 
 Create or update:
 
-1. `/home/daniel/git/vidiq/lit-survey/pdfs/`
-2. `/home/daniel/git/vidiq/lit-survey/pdfs/download-report.md`
+1. `/home/daniel/git/vidiq/lit-survey/<agent-name>/pdfs/`
+2. `/home/daniel/git/vidiq/lit-survey/<agent-name>/pdfs/download-report.md`
 
 Do not write the report anywhere else.
 
@@ -38,7 +53,7 @@ Do not write the report anywhere else.
    - peer-reviewed venue PDF
    - otherwise arXiv PDF
    - otherwise an official author-hosted PDF
-7. Save each PDF into `/home/daniel/git/vidiq/lit-survey/pdfs` using:
+7. Save each PDF into `/home/daniel/git/vidiq/lit-survey/<agent-name>/pdfs` using:
    - `year-short-title.pdf`
    - lowercase only
    - spaces replaced by hyphens
@@ -52,7 +67,7 @@ Do not write the report anywhere else.
 
 Write the report to:
 
-`/home/daniel/git/vidiq/lit-survey/pdfs/download-report.md`
+`/home/daniel/git/vidiq/lit-survey/<agent-name>/pdfs/download-report.md`
 
 At the very top of the report, include these one-line counters:
 
@@ -93,8 +108,11 @@ Under `## Failed or unresolved downloads`, group entries under:
 
 ### DIRECTORY RULES
 
-- Create `/home/daniel/git/vidiq/lit-survey/pdfs` if needed.
+- Create `/home/daniel/git/vidiq/lit-survey/<agent-name>/pdfs` if needed.
 - Put both the PDFs and the report in that exact folder.
+- Only write inside your own agent-specific folder.
+- Never write into another agent's folder.
+- Never write into the shared path `/home/daniel/git/vidiq/lit-survey/pdfs`.
 - Do not overwrite an existing file unless it is clearly a better version of the same paper.
 - Do not place temporary or final report files outside this folder.
 

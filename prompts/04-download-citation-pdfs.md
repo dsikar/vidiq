@@ -10,11 +10,23 @@ Your task is to create and execute a careful plan to download PDFs for the citat
 
 Build a local paper library for the citation index.
 
-Download one PDF per citation where a legitimate PDF is available, and organize the results inside:
+Download one PDF per citation where a legitimate PDF is available, and organize the results inside an agent-specific subdirectory under `lit-survey`.
 
-`/home/daniel/git/vidiq/lit-survey/pdfs`
+First determine your agent name and create exactly one matching folder:
 
-Put the report in that same folder.
+- if you are Codex, use `/home/daniel/git/vidiq/lit-survey/codex`
+- if you are Claude, use `/home/daniel/git/vidiq/lit-survey/claude`
+- if you are Gemini, use `/home/daniel/git/vidiq/lit-survey/gemini`
+
+Inside that agent folder, put the PDFs in `pdfs/` and put the report in that same `pdfs/` folder.
+
+Examples:
+
+- Codex must write to `/home/daniel/git/vidiq/lit-survey/codex/pdfs`
+- Claude must write to `/home/daniel/git/vidiq/lit-survey/claude/pdfs`
+- Gemini must write to `/home/daniel/git/vidiq/lit-survey/gemini/pdfs`
+
+Do not use a shared folder such as `/home/daniel/git/vidiq/lit-survey/pdfs`.
 
 ---
 
@@ -33,13 +45,13 @@ Put the report in that same folder.
    - otherwise arXiv PDF
    - otherwise an official author-hosted PDF
 6. Before downloading, verify that the paper title and year match the citation entry closely enough to avoid false matches.
-7. Save PDFs into `lit-survey/pdfs` using a consistent filename format:
+7. Save PDFs into your own agent-specific `pdfs` folder using a consistent filename format:
    - `YEAR-short-title.pdf`
    - use lowercase
    - replace spaces with hyphens
    - keep filenames short but unambiguous
 8. Create a tracking file in the same folder as the PDFs:
-   - `/home/daniel/git/vidiq/lit-survey/pdfs/download-report.md`
+   - `/home/daniel/git/vidiq/lit-survey/<agent-name>/pdfs/download-report.md`
 9. In that log, record for each citation:
    - citation number
    - normalized citation text
@@ -72,7 +84,10 @@ Put the report in that same folder.
 
 ### DIRECTORY RULES
 
-- Create `lit-survey/pdfs` if it does not exist.
+- Create `lit-survey/<agent-name>/pdfs` if it does not exist.
+- Only write inside your own agent folder.
+- Never write into another agent's folder.
+- Never write into a shared folder such as `lit-survey/pdfs`.
 - Do not overwrite an existing PDF unless the new file is clearly a better version of the same paper.
 - If two citations refer to the same work, keep one PDF and note the duplicate in the log.
 
@@ -91,8 +106,8 @@ Put the report in that same folder.
 
 Produce:
 
-1. `lit-survey/pdfs/` with downloaded PDFs
-2. `lit-survey/pdfs/download-report.md`
+1. `lit-survey/<agent-name>/pdfs/` with downloaded PDFs
+2. `lit-survey/<agent-name>/pdfs/download-report.md`
 3. A clear final report in the agent response summarizing:
    - successful downloads
    - failed downloads
