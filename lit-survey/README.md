@@ -65,8 +65,8 @@ Column guide:
 | 43 | 2021-generalized-shape-metrics-on-neural-representations.pdf | P | 2 | Discusses metrics to compare embeddings, might be important especially convolutional aware metrics. |
 | 44 | 2021-how-does-fine-tuning-affect-geometry-embedding-space.pdf | P | 0 | Talks about how finetuning changes embedding but not relevant to us. |
 | 45 | 2021-isoscore-measuring-uniformity-embedding-space-utilization.pdf | P | 1 | The concept of isoscore might be relevant and be combined with clustering to give better validation. |
-| 46 | 2021-learning-transferable-visual-models-from-natural-language-supervision.pdf | P |  |  |
-| 47 | 2021-scalable-interpretable-semantic-change-detection.pdf | P |  |  |
+| 46 | 2021-learning-transferable-visual-models-from-natural-language-supervision.pdf | P | 0 | Talks about using LLM to make labels for image instead of fixed dataset labels so not relevant |
+| 47 | 2021-scalable-interpretable-semantic-change-detection.pdf | P | 0 | Talks about how to keep word tokens with most meanings possible of the word using min space |
 | 48 | 2021-scaling-up-visual-vision-language-representation-learning-with.pdf | P |  |  |
 | 49 | 2021-simcse-simple-contrastive-learning-sentence-embeddings.pdf | P |  |  |
 | 50 | 2021-too-much-common-shifting-embeddings-transformer-language-models.pdf | P |  |  |
