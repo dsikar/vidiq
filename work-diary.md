@@ -42,7 +42,9 @@ codex
 - Added `/home/daniel/git/vidiq/prompts/07-extract-title-abstract-conclusion.md`, a prompt directing an agent to read every PDF in `/home/daniel/git/vidiq/lit-survey/codex` and generate `/home/daniel/git/vidiq/reports/title-abstract-conclusion.md`.
 - Created `/home/daniel/git/vidiq/reports/` as the target directory for generated extraction reports.
 - Specified in the new prompt that the report must extract, for every PDF, the paper title, abstract, and conclusion, mark missing sections as `Not found`, preserve source wording conservatively, and include a summary plus a complete processed file list.
-- Prepared the new prompt and this work diary update for a dedicated commit without including the unrelated staged PDFs or other prompt changes currently present in the worktree.
+- Added `reports/gemini-text-dataset-report.md` and `reports/openai-text-dataset-report.md`, providing a comprehensive survey of experimental text datasets for analyzing LLM embedding spaces (sentiment, subjectivity, formality, etc.).
+- Populated `lit-survey/gemini/` with 82 PDFs for citations listed in the citation index, following the workflow in `prompts/05-download-pdfs-into-subfolder.md`.
+- Generated `lit-survey/gemini/download-report.md` documenting 69 successful matches and 43 unresolved citations from the consolidated index.
 
 ## March 28, 2026
 
